@@ -6,7 +6,7 @@ import googleLogo from "../assets/google-logo.png";
 function Login() {
   const handleGoogleLogin = () => {
     window.location.href =
-      "https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://localhost:3000/onebox";
+      "https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=https://onebox-zeta.vercel.app/onebox";
   };
   return (
     <div className="login-page flex flex-col items-center justify-center">

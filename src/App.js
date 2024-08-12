@@ -8,9 +8,15 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/inbox" element={<Inbox />} />
-        <Route path="/" element={<Login />} />
-        <Route path="/onebox" element={<Onebox />} />
+        <Route
+          path="/https://onebox-zeta.vercel.app/inbox"
+          element={<Inbox />}
+        />
+        <Route path="/https://onebox-zeta.vercel.app/" element={<Login />} />
+        <Route
+          path="/https://onebox-zeta.vercel.app/onebox"
+          element={<Onebox />}
+        />
       </Routes>
     </Router>
   );
