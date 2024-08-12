@@ -1,0 +1,120 @@
+.login-page {
+    background-color: #000000;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+.navbar {
+    border-bottom: 1px solid #25262B;
+    width: 100%;
+}
+
+.login-page .main {
+     width: 100%;
+    background-color: #000000;
+    flex: 1;
+}
+
+.login-page .main .container {
+    background-color: #121313;
+    border: 1px solid #343A40;
+    border-radius: 17px;
+    width: 40%;
+    padding: 40px;
+    color: #fff;
+}
+
+.login-page .main .container h1 {
+    font-size: 1.5rem !important;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.sign-up-btn {
+    border: 1px solid #707172;
+    padding: 10px 30px;
+    width: 60%;
+    align-self: center;
+    border-radius: 4px;
+    margin-bottom: 35px;
+    white-space: nowrap;
+}
+
+.sign-up-btn p {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: #CCCCCC;
+}
+
+.create-acc-btn {
+    background: linear-gradient(91.73deg, #4B63DD -2.99%, rgba(5, 36, 191, 0.99) 95.8%);
+border-radius: 4px;
+padding: 15px;
+width: 50%;
+margin-bottom: 20px;
+background-size: 200% 200%;
+    background-position: 0% 50%;
+transition: background-position 0.5s ease;
+}
+
+.create-acc-btn:hover {
+    background-position: 100% 50%;
+}
+
+.container p:nth-child(4) {
+    color: #909296;
+    font-size: 1.1rem;
+}
+
+.container p:nth-child(4) span {
+    color: #C1C2C5;
+}
+
+.container p:nth-child(4) span:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #121212;
+    border-top: 1px solid #25262B;
+    color: #5C5F66;
+    width: 100%;
+
+}
+
+@media screen and (max-width: 1100px) {
+    .login-page .main .container {
+        width: 50%
+    }
+}
+
+@media screen and (max-width: 846px) {
+    .login-page .main .container {
+        width: 65%
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .login-page .main .container {
+        width: 75%
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .login-page .main .container {
+        width: 85%
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login-page .main .container {
+        width: 90%
+    }
+    .sign-up-btn {
+        width: 80%;
+    }
+    .create-acc-btn {
+        width: 70%;
+    }
+}
