@@ -1,14 +1,19 @@
-Installation
+## Installation
+
 To set up this project locally, follow these steps:
 
-Clone the repository
+1. **Clone the repository**
 
-git clone https://github.com/shiiivani/onebox.git
-cd onebox
-Install dependencies
+   ```bash
+   git clone https://github.com/shiiivani/onebox.git
+   cd onebox
 
-Make sure you have Node.js and npm.Then run: npm install
+   ```
 
-Usage
+2. **Install dependencies**
 
-To start the application in development mode, run: npm start
+   npm install
+
+3. **Usage**
+
+To start the application in development mode, run: npm run start
