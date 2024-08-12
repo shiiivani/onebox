@@ -58,6 +58,7 @@ function Onebox() {
 
         const result = await response.json();
         setData(result.data);
+        console.log(data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
