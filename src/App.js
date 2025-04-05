@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/inbox" element={<Inbox />} />
+        <Route path="/" element={<Inbox />} />
         <Route path="/" element={<Login />} />
         <Route path="/onebox" element={<Onebox />} />
       </Routes>

@@ -449,7 +449,7 @@ function Onebox() {
             <div className="filter-container mb-5 flex items-center justify-between">
               <div className="flex items-center">
                 <div className="unread-messages-numbers">
-                  <p>0</p>
+                  <p>26</p>
                 </div>
                 <p>New Replies</p>
               </div>
@@ -481,60 +481,166 @@ function Onebox() {
                 </svg>
               </button>
             </div>
-            {data.map((info, index) => (
-              <div
-                key={index}
-                className={`single-message-container ${
-                  activeIndex === index ? "active" : ""
-                }`}
-                onClick={() => {
-                  handleClick(index);
-                  setSidePanel(!sidePanel);
-                }}
-              >
-                <div className="flex items-center justify-between">
-                  <div className="sender-name flex items-center">
-                    {info.isRead ? (
-                      ""
-                    ) : (
-                      <div className="unread-message-icon"></div>
-                    )}
-                    <p>{info.fromEmail}</p>
-                  </div>
-                  <p className="date">{formatDate(info.sentAt)}</p>
+            <div className="single-message-container">
+              <div className="flex items-center justify-between">
+                <div className="sender-name flex items-center">
+                  <div className="unread-message-icon"></div>
+                  <p>Beata@gmail.com</p>
                 </div>
-                <p className="message">I've tried a lot and .</p>
-                <div className="button-container mt-3 flex items-center justify-between">
-                  <button className="status interested flex items-center">
-                    <div className="status-icon"></div>
-                    <p>Interested</p>
-                  </button>
-                  <button className="campaign flex items-center">
-                    <svg
-                      width="25"
-                      height="28"
-                      viewBox="0 0 28 29"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M15.7381 23.5C16.0667 23.5 16.3472 23.3754 16.5795 23.1261C16.8118 22.8824 17.0072 22.5567 17.1659 22.1487L22.7664 7.48867C22.8401 7.29603 22.8967 7.11756 22.9364 6.95326C22.9761 6.78895 22.9959 6.63314 22.9959 6.48584C22.9959 6.18555 22.9081 5.94759 22.7324 5.77195C22.5568 5.59065 22.3188 5.5 22.0186 5.5C21.8769 5.5 21.7211 5.52266 21.5511 5.56799C21.3812 5.60765 21.1999 5.66147 21.0072 5.72946L6.29618 11.364C5.92791 11.5057 5.61913 11.6926 5.36983 11.9249C5.12621 12.1572 5.00439 12.4377 5.00439 12.7663C5.00439 13.1686 5.14037 13.466 5.41233 13.6586C5.68428 13.8456 6.02706 14.0014 6.44065 14.1261L10.8514 15.4773C11.146 15.568 11.3925 15.6048 11.5908 15.5878C11.7891 15.5652 11.9931 15.4575 12.2027 15.2649L21.6616 6.49433C21.7183 6.44334 21.7778 6.41785 21.8401 6.41785C21.9081 6.41785 21.9676 6.44051 22.0186 6.48584C22.0639 6.53116 22.0865 6.58782 22.0865 6.65581C22.0865 6.71813 22.0582 6.77762 22.0016 6.83428L13.265 16.3187C13.0837 16.5113 12.9789 16.7096 12.9506 16.9136C12.9279 17.1176 12.9591 17.3697 13.0441 17.67L14.3528 21.9873C14.4831 22.4235 14.6446 22.7833 14.8373 23.0666C15.0299 23.3555 15.3302 23.5 15.7381 23.5Z"
-                        fill="#AEAEAE"
-                      />
-                    </svg>
-                    <p>Campaign Name</p>
-                  </button>
-                </div>
+                <p className="date">Mar 7</p>
               </div>
-            ))}
+              <p className="message">I've tried a lot and .</p>
+              <div className="button-container mt-3 flex items-center gap-2">
+                <button className="status interested flex items-center">
+                  <div className="status-icon"></div>
+                  <p>Interested</p>
+                </button>
+                <button className="campaign flex items-center">
+                  <svg
+                    width="25"
+                    height="28"
+                    viewBox="0 0 28 29"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.7381 23.5C16.0667 23.5 16.3472 23.3754 16.5795 23.1261C16.8118 22.8824 17.0072 22.5567 17.1659 22.1487L22.7664 7.48867C22.8401 7.29603 22.8967 7.11756 22.9364 6.95326C22.9761 6.78895 22.9959 6.63314 22.9959 6.48584C22.9959 6.18555 22.9081 5.94759 22.7324 5.77195C22.5568 5.59065 22.3188 5.5 22.0186 5.5C21.8769 5.5 21.7211 5.52266 21.5511 5.56799C21.3812 5.60765 21.1999 5.66147 21.0072 5.72946L6.29618 11.364C5.92791 11.5057 5.61913 11.6926 5.36983 11.9249C5.12621 12.1572 5.00439 12.4377 5.00439 12.7663C5.00439 13.1686 5.14037 13.466 5.41233 13.6586C5.68428 13.8456 6.02706 14.0014 6.44065 14.1261L10.8514 15.4773C11.146 15.568 11.3925 15.6048 11.5908 15.5878C11.7891 15.5652 11.9931 15.4575 12.2027 15.2649L21.6616 6.49433C21.7183 6.44334 21.7778 6.41785 21.8401 6.41785C21.9081 6.41785 21.9676 6.44051 22.0186 6.48584C22.0639 6.53116 22.0865 6.58782 22.0865 6.65581C22.0865 6.71813 22.0582 6.77762 22.0016 6.83428L13.265 16.3187C13.0837 16.5113 12.9789 16.7096 12.9506 16.9136C12.9279 17.1176 12.9591 17.3697 13.0441 17.67L14.3528 21.9873C14.4831 22.4235 14.6446 22.7833 14.8373 23.0666C15.0299 23.3555 15.3302 23.5 15.7381 23.5Z"
+                      fill="#AEAEAE"
+                    />
+                  </svg>
+                  <p>Campaign Name</p>
+                </button>
+              </div>
+            </div>
+            <div className="single-message-container">
+              <div className="flex items-center justify-between">
+                <div className="sender-name flex items-center">
+                  <p>Sanya@gmail.com</p>
+                </div>
+                <p className="date">Mar 7</p>
+              </div>
+              <p className="message">I've tried a lot and .</p>
+              <div className="button-container mt-3 flex items-center gap-2">
+                <button className="status closed flex items-center">
+                  <div className="status-icon"></div>
+                  <p>Closed</p>
+                </button>
+                <button className="campaign flex items-center">
+                  <svg
+                    width="25"
+                    height="28"
+                    viewBox="0 0 28 29"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.7381 23.5C16.0667 23.5 16.3472 23.3754 16.5795 23.1261C16.8118 22.8824 17.0072 22.5567 17.1659 22.1487L22.7664 7.48867C22.8401 7.29603 22.8967 7.11756 22.9364 6.95326C22.9761 6.78895 22.9959 6.63314 22.9959 6.48584C22.9959 6.18555 22.9081 5.94759 22.7324 5.77195C22.5568 5.59065 22.3188 5.5 22.0186 5.5C21.8769 5.5 21.7211 5.52266 21.5511 5.56799C21.3812 5.60765 21.1999 5.66147 21.0072 5.72946L6.29618 11.364C5.92791 11.5057 5.61913 11.6926 5.36983 11.9249C5.12621 12.1572 5.00439 12.4377 5.00439 12.7663C5.00439 13.1686 5.14037 13.466 5.41233 13.6586C5.68428 13.8456 6.02706 14.0014 6.44065 14.1261L10.8514 15.4773C11.146 15.568 11.3925 15.6048 11.5908 15.5878C11.7891 15.5652 11.9931 15.4575 12.2027 15.2649L21.6616 6.49433C21.7183 6.44334 21.7778 6.41785 21.8401 6.41785C21.9081 6.41785 21.9676 6.44051 22.0186 6.48584C22.0639 6.53116 22.0865 6.58782 22.0865 6.65581C22.0865 6.71813 22.0582 6.77762 22.0016 6.83428L13.265 16.3187C13.0837 16.5113 12.9789 16.7096 12.9506 16.9136C12.9279 17.1176 12.9591 17.3697 13.0441 17.67L14.3528 21.9873C14.4831 22.4235 14.6446 22.7833 14.8373 23.0666C15.0299 23.3555 15.3302 23.5 15.7381 23.5Z"
+                      fill="#AEAEAE"
+                    />
+                  </svg>
+                  <p>Campaign Name</p>
+                </button>
+              </div>
+            </div>
+            <div className="single-message-container">
+              <div className="flex items-center justify-between">
+                <div className="sender-name flex items-center">
+                  <div className="unread-message-icon"></div>
+                  <p>william@gmail.com</p>
+                </div>
+                <p className="date">Mar 7</p>
+              </div>
+              <p className="message">Payment not going through</p>
+              <div className="button-container mt-3 flex items-center gap-2">
+                <button className="status interested flex items-center">
+                  <div className="status-icon"></div>
+                  <p>Interested</p>
+                </button>
+                <button className="campaign flex items-center">
+                  <svg
+                    width="25"
+                    height="28"
+                    viewBox="0 0 28 29"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.7381 23.5C16.0667 23.5 16.3472 23.3754 16.5795 23.1261C16.8118 22.8824 17.0072 22.5567 17.1659 22.1487L22.7664 7.48867C22.8401 7.29603 22.8967 7.11756 22.9364 6.95326C22.9761 6.78895 22.9959 6.63314 22.9959 6.48584C22.9959 6.18555 22.9081 5.94759 22.7324 5.77195C22.5568 5.59065 22.3188 5.5 22.0186 5.5C21.8769 5.5 21.7211 5.52266 21.5511 5.56799C21.3812 5.60765 21.1999 5.66147 21.0072 5.72946L6.29618 11.364C5.92791 11.5057 5.61913 11.6926 5.36983 11.9249C5.12621 12.1572 5.00439 12.4377 5.00439 12.7663C5.00439 13.1686 5.14037 13.466 5.41233 13.6586C5.68428 13.8456 6.02706 14.0014 6.44065 14.1261L10.8514 15.4773C11.146 15.568 11.3925 15.6048 11.5908 15.5878C11.7891 15.5652 11.9931 15.4575 12.2027 15.2649L21.6616 6.49433C21.7183 6.44334 21.7778 6.41785 21.8401 6.41785C21.9081 6.41785 21.9676 6.44051 22.0186 6.48584C22.0639 6.53116 22.0865 6.58782 22.0865 6.65581C22.0865 6.71813 22.0582 6.77762 22.0016 6.83428L13.265 16.3187C13.0837 16.5113 12.9789 16.7096 12.9506 16.9136C12.9279 17.1176 12.9591 17.3697 13.0441 17.67L14.3528 21.9873C14.4831 22.4235 14.6446 22.7833 14.8373 23.0666C15.0299 23.3555 15.3302 23.5 15.7381 23.5Z"
+                      fill="#AEAEAE"
+                    />
+                  </svg>
+                  <p>Campaign Name</p>
+                </button>
+              </div>
+            </div>
+            <div className="single-message-container">
+              <div className="flex items-center justify-between">
+                <div className="sender-name flex items-center">
+                  <p>johnson@gmail.com</p>
+                </div>
+                <p className="date">Mar 7</p>
+              </div>
+              <p className="message">Could you tell me more about it</p>
+              <div className="button-container mt-3 flex items-center gap-2">
+                <button className="status booked flex items-center">
+                  <div className="status-icon"></div>
+                  <p>Meeting Booked</p>
+                </button>
+                <button className="campaign flex items-center">
+                  <svg
+                    width="25"
+                    height="28"
+                    viewBox="0 0 28 29"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.7381 23.5C16.0667 23.5 16.3472 23.3754 16.5795 23.1261C16.8118 22.8824 17.0072 22.5567 17.1659 22.1487L22.7664 7.48867C22.8401 7.29603 22.8967 7.11756 22.9364 6.95326C22.9761 6.78895 22.9959 6.63314 22.9959 6.48584C22.9959 6.18555 22.9081 5.94759 22.7324 5.77195C22.5568 5.59065 22.3188 5.5 22.0186 5.5C21.8769 5.5 21.7211 5.52266 21.5511 5.56799C21.3812 5.60765 21.1999 5.66147 21.0072 5.72946L6.29618 11.364C5.92791 11.5057 5.61913 11.6926 5.36983 11.9249C5.12621 12.1572 5.00439 12.4377 5.00439 12.7663C5.00439 13.1686 5.14037 13.466 5.41233 13.6586C5.68428 13.8456 6.02706 14.0014 6.44065 14.1261L10.8514 15.4773C11.146 15.568 11.3925 15.6048 11.5908 15.5878C11.7891 15.5652 11.9931 15.4575 12.2027 15.2649L21.6616 6.49433C21.7183 6.44334 21.7778 6.41785 21.8401 6.41785C21.9081 6.41785 21.9676 6.44051 22.0186 6.48584C22.0639 6.53116 22.0865 6.58782 22.0865 6.65581C22.0865 6.71813 22.0582 6.77762 22.0016 6.83428L13.265 16.3187C13.0837 16.5113 12.9789 16.7096 12.9506 16.9136C12.9279 17.1176 12.9591 17.3697 13.0441 17.67L14.3528 21.9873C14.4831 22.4235 14.6446 22.7833 14.8373 23.0666C15.0299 23.3555 15.3302 23.5 15.7381 23.5Z"
+                      fill="#AEAEAE"
+                    />
+                  </svg>
+                  <p>Campaign Name</p>
+                </button>
+              </div>
+            </div>
+            <div className="single-message-container active">
+              <div className="flex items-center justify-between">
+                <div className="sender-name flex items-center">
+                  <p>orlando@gmail.com</p>
+                </div>
+                <p className="date">Mar 7</p>
+              </div>
+              <p className="message">Hi, I am interested</p>
+              <div className="button-container mt-3 flex items-center gap-2">
+                <button className="status completed flex items-center">
+                  <div className="status-icon"></div>
+                  <p>Meeting Completed</p>
+                </button>
+                <button className="campaign flex items-center">
+                  <svg
+                    width="25"
+                    height="28"
+                    viewBox="0 0 28 29"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.7381 23.5C16.0667 23.5 16.3472 23.3754 16.5795 23.1261C16.8118 22.8824 17.0072 22.5567 17.1659 22.1487L22.7664 7.48867C22.8401 7.29603 22.8967 7.11756 22.9364 6.95326C22.9761 6.78895 22.9959 6.63314 22.9959 6.48584C22.9959 6.18555 22.9081 5.94759 22.7324 5.77195C22.5568 5.59065 22.3188 5.5 22.0186 5.5C21.8769 5.5 21.7211 5.52266 21.5511 5.56799C21.3812 5.60765 21.1999 5.66147 21.0072 5.72946L6.29618 11.364C5.92791 11.5057 5.61913 11.6926 5.36983 11.9249C5.12621 12.1572 5.00439 12.4377 5.00439 12.7663C5.00439 13.1686 5.14037 13.466 5.41233 13.6586C5.68428 13.8456 6.02706 14.0014 6.44065 14.1261L10.8514 15.4773C11.146 15.568 11.3925 15.6048 11.5908 15.5878C11.7891 15.5652 11.9931 15.4575 12.2027 15.2649L21.6616 6.49433C21.7183 6.44334 21.7778 6.41785 21.8401 6.41785C21.9081 6.41785 21.9676 6.44051 22.0186 6.48584C22.0639 6.53116 22.0865 6.58782 22.0865 6.65581C22.0865 6.71813 22.0582 6.77762 22.0016 6.83428L13.265 16.3187C13.0837 16.5113 12.9789 16.7096 12.9506 16.9136C12.9279 17.1176 12.9591 17.3697 13.0441 17.67L14.3528 21.9873C14.4831 22.4235 14.6446 22.7833 14.8373 23.0666C15.0299 23.3555 15.3302 23.5 15.7381 23.5Z"
+                      fill="#AEAEAE"
+                    />
+                  </svg>
+                  <p>Campaign Name</p>
+                </button>
+              </div>
+            </div>
           </div>
 
           {/* Main Middle */}
           <div className={toggleButton ? "main-middle light" : "main-middle"}>
             <div className="main-middle-nav flex items-center justify-between">
               <div className="sender-info">
-                <h5>{activeSender?.fromName}</h5>
-                <p>{activeSender?.fromEmail}</p>
+                <h5>Orlando</h5>
+                <p>orladom@gmail.com</p>
               </div>
               <div className="button-container flex items-center">
                 <div className="dropdown-container">
@@ -785,24 +891,25 @@ function Onebox() {
             <div className="message-container p-4">
               <div className="message-date mt-4 flex items-center justify-center">
                 <hr />
-                <p>{formatDate(activeSender?.sentAt)}</p>
+                <p>Today</p>
                 <hr />
               </div>
               <div className="message-box my-5">
                 <div className="flex items-center justify-between">
-                  <p className="subject">{activeSender?.subject}</p>
-                  <p className="date">
-                    {secondDateFormate(activeSender?.sentAt)}
-                  </p>
+                  <p className="subject">New Product Launch</p>
+                  <p className="date">20 june 2022 : 9:16AM</p>
                 </div>
                 <p className="message-from">
-                  from : {activeSender?.fromEmail} cc : {activeSender?.cc}
+                  from : jeanne@icloud.com cc : lennon.j@mail.com
                 </p>
-                <p className="message-to">to : {activeSender?.toEmail} </p>
-                <p
-                  className="message"
-                  dangerouslySetInnerHTML={{ __html: activeSender?.body }}
-                />
+                <p className="message-to">to : lennon.j@mail.com </p>
+                <p className="message">
+                  Hi (FIRST_NAME), <br />I would like to introduce you to
+                  SaaSgrow, a productized design service specifically tailored
+                  for saas startups. Our aim is to help you enhance the user
+                  experience and boost the visual appeal of your software
+                  products.
+                </p>
               </div>
               <div className="message-date mt-4 flex items-center justify-center">
                 <hr />
@@ -832,6 +939,23 @@ function Onebox() {
                   View all 4 replies
                 </p>
                 <hr />
+              </div>
+              <div className="message-box my-5">
+                <div className="flex items-center justify-between">
+                  <p className="subject">New Product Launch</p>
+                  <p className="date">20 june 2022 : 9:16AM</p>
+                </div>
+                <p className="message-from">
+                  from : jeanne@icloud.com cc : lennon.j@mail.com
+                </p>
+                <p className="message-to">to : lennon.j@mail.com </p>
+                <p className="message">
+                  Hi (FIRST_NAME), <br />I would like to introduce you to
+                  SaaSgrow, a productized design service specifically tailored
+                  for saas startups. Our aim is to help you enhance the user
+                  experience and boost the visual appeal of your software
+                  products.
+                </p>
               </div>
             </div>
             <button
@@ -878,21 +1002,11 @@ function Onebox() {
               </div>
               <div className="from-container flex items-center">
                 <p>From:</p>
-                <input
-                  type="email"
-                  name="from-email"
-                  value={from}
-                  onChange={(e) => setFrom(e.target.value)}
-                />
+                <input type="email" name="from-email" value={from} />
               </div>
               <div className="subject-container flex items-center">
                 <p>Subject: </p>
-                <input
-                  type="text"
-                  name="subject"
-                  value={subject}
-                  onChange={(e) => setSubject(e.target.value)}
-                />
+                <input type="text" name="subject" value={subject} />
               </div>
               <div className="editor">
                 <Editor
@@ -902,17 +1016,11 @@ function Onebox() {
                 />
               </div>
               <div className="modal-footer flex items-center">
-                <button
-                  className="send-btn flex items-center"
-                  onClick={() => handleSubmit(activeSender.threadId)}
-                >
+                <button className="send-btn flex items-center">
                   <p>Send</p>
                   <img src={arrowDown} width="10px" alt="Arrow down Icon" />
                 </button>
-                <button
-                  className="draft-btn flex items-center"
-                  onClick={handleSave}
-                >
+                <button className="draft-btn flex items-center">
                   <img src={saveDraft} width="25px" alt="Draft icon" />
                   <p>Save draft</p>
                 </button>
@@ -942,7 +1050,7 @@ function Onebox() {
             <div className="user-info my-5">
               <div className="flex items-center justify-between">
                 <p>Name </p>
-                <p>{activeSender?.fromName}</p>
+                <p>Orlando</p>
               </div>
               <div className="flex items-center justify-between">
                 <p>Contact No </p>
@@ -950,7 +1058,7 @@ function Onebox() {
               </div>
               <div className="flex items-center justify-between">
                 <p>Email ID</p>
-                <p>{activeSender?.fromEmail}</p>
+                <p>orlando@gmail.com</p>
               </div>
               <div className="flex items-center justify-between">
                 <p>Linkedin</p>
